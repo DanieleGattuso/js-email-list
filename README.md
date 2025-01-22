@@ -1,1 +1,1 @@
-# -js-email-list
+# js-email-list
