@@ -14,11 +14,33 @@ const endpoint = 'https://flynn.boolean.careers/exercises/api/random/mail'
 
 // Avvio la richiesta ajax tramite axios
 
-axios.get(endpoint)
+let tenEmails =[]
+
+for(let i=0; i < 10; i++){
+
+
+    axios.get(endpoint)
 
     .then(response => {
         
-        const email = response.data.response
+        const email = response.data.response;
+
+        tenEmails.push(email)
+        
+        
         
         
     })
+
+
+}
+
+
+
+
+
+
+
+
+
+
