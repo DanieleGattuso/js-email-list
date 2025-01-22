@@ -14,7 +14,7 @@ const endpoint = 'https://flynn.boolean.careers/exercises/api/random/mail'
 
 // Avvio la richiesta ajax tramite axios
 
-let tenEmails =[]
+
 
 for(let i=0; i < 10; i++){
 
@@ -25,12 +25,17 @@ for(let i=0; i < 10; i++){
         
         const email = response.data.response;
 
-        tenEmails.push(email)
         
+        
+        emailList.innerHTML += `<li>${email}</li>`
         
         
         
     })
+
+    .catch(error => {
+        console.error('Errore nel fetch dell’email:', error);
+    });
 
 
 }
